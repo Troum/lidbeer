@@ -1,0 +1,22 @@
+app-lb-navbar {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: #FCBB29;
+}
+
+.lb-container{
+  background-color: #FCBB29;
+  min-height: 100vh;
+}
+
+.lb-router-outlet {
+  margin-top: 76px;
+  min-height: 100%;
+}
+
+@media (max-width: 576px) {
+  app-lb-navbar {
+    max-width: 576px;
+  }
+}

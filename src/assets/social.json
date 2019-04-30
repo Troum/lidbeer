@@ -1,0 +1,16 @@
+{
+  "social": [
+    {
+      "link": "https://vk.com/lidbeer_official",
+      "icon": "fab fa-vk"
+    },
+    {
+      "link": "https://business.facebook.com/events/627376757738638/",
+      "icon": "fab fa-facebook-f"
+    },
+    {
+      "link": "https://www.instagram.com/lidbeer_official/",
+      "icon": "fab fa-instagram"
+    }
+  ]
+}

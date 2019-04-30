@@ -1,0 +1,28 @@
+{
+  "feedback": [
+    {
+      "link": "free-scene",
+      "title": "Малая сцэна"
+    },
+    {
+      "link": "foodcort",
+      "title": "Фудкорт"
+    },
+    {
+      "link": "craft",
+      "title": "Рамёствы"
+    },
+    {
+      "link": "game",
+      "title": "Актывацыi"
+    },
+    {
+      "link": "partner",
+      "title": "Партнёрства"
+    },
+    {
+      "link": "message",
+      "title": "Зваротная сувязь"
+    }
+  ]
+}

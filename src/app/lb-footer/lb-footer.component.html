@@ -1,0 +1,18 @@
+<div class="row m-0 lb-footer">
+  <div class="col-10 col-xl-8 mx-auto text-center">
+    <p class="text-white-50 m-0" style="line-height: .8em">
+      <small [innerHTML]="social.license"></small>
+    </p>
+  </div>
+  <div class="col-10 col-xl-8 mx-auto p-0 text-center">
+    <nav class="navbar navbar-expand p-0">
+      <ul class="navbar-nav mx-auto pt-0 pb-0">
+        <li *ngFor="let item of social.social" class="nav-item">
+          <a [href]="item.link" class="nav-link">
+            <i [ngClass]="item.icon"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+#documents {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+label[for="documents"]:hover {
+  cursor: pointer;
+}
+label[for="documents"]::after {
+  content: url('../../../../assets/img/attach.png');
+  position: absolute;
+  right: 5%;
+  top: 4%;
+}

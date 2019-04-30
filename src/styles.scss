@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~bootstrap/scss/bootstrap';
+@import 'variables.scss';
+@import '~hamburgers/_sass/hamburgers/hamburgers';
+
+app-lb-admin-sidenav {
+  width: 100%;
+}
+.lb-component {
+  min-height: $component_height;
+}
+@media (max-width: 587px) {
+  html {
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,4 @@
+$component_height: calc(100vh - 152px);
+@media (max-width: 576px) {
+  $component_height: calc(100vh - 76px);
+}

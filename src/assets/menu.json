@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "link": "about",
+      "title": "Пра фестываль"
+    },
+    {
+      "link": "gala-concert",
+      "title": "Гала-канцэрт"
+    },
+    {
+      "link": "contacts",
+      "title": "Кантакты"
+    }
+  ]
+}

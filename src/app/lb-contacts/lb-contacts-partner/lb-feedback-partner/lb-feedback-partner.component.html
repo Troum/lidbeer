@@ -1,0 +1,44 @@
+<div class="row m-0 p-0 d-flex align-items-center lb-component">
+  <div class="col-10 col-xl-9 mx-auto">
+    <h1 class="font-weight-bold text-uppercase text-center">{{ info.title }}</h1>
+    <h2 class="h6 text-center">{{ info.subtitle }}</h2>
+    <h3 *ngIf="info.success" class="h2 text-center">{{ response.success }}</h3>
+    <h3 *ngIf="info.error" class="h2 text-center">{{ info.error }}</h3>
+  </div>
+  <div class="col-12">
+    <div class="row m-0 p-0">
+      <div class="col-10 col-xl-4 mx-auto">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="form-group">
+            <label for="name">{{ info.labels.name }}</label>
+            <input type="text" class="form-control rounded-0" autocomplete="off" [ngClass]="{ 'is-invalid':info.submitted && partner.name.errors }" id="name" formControlName="name">
+            <div *ngIf=" info.submitted && partner.name.errors" class="invalid-feedback">
+              <div *ngIf="partner.name.errors.required">{{ info.errors.name }}</div>
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <label>{{ info.labels.documents }}</label>
+            <div class="position-relative m-0 p-0">
+              <label for="documents" class="form-control rounded-0" [ngClass]="{ 'is-invalid':info.submitted && partner.documents.errors }" [innerHTML]="info.pluralize"></label>
+              <input type="file" multiple id="documents" name="documents" formControlName="documents" (change)="toPluralize($event)">
+              <div *ngIf=" info.submitted && partner.documents.errors" class="invalid-feedback">
+              <div *ngIf="partner.documents.errors.required">{{ info.errors.name }}</div>
+            </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contacts">{{ info.labels.contacts }}</label>
+            <input type="text" class="form-control rounded-0" autocomplete="off" [ngClass]="{ 'is-invalid':info.submitted && partner.contacts.errors }" id="contacts" formControlName="contacts">
+            <div *ngIf=" info.submitted && partner.contacts.errors" class="invalid-feedback">
+              <div *ngIf="partner.contacts.errors.required">{{ info.errors.name }}</div>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <app-lb-ticket-button [type]="'submit'" [text]="'адправіць'"></app-lb-ticket-button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <app-lb-phone></app-lb-phone>
+  </div>
+</div>

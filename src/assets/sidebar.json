@@ -1,0 +1,29 @@
+{
+  "sidebar": [
+    {
+      "title": "Хэдлайнеры",
+      "link": "headliner",
+      "icon": "fab fa-napster"
+    },
+    {
+      "title": "Свободная сцена",
+      "link": "free-scene",
+      "icon": "fas fa-guitar"
+    },
+    {
+      "title": "Фудкорт",
+      "link": "foodcort",
+      "icon": "fas fa-utensils"
+    },
+    {
+      "title": "Ремесла",
+      "link": "craft",
+      "icon": "fas fa-pencil-ruler"
+    },
+    {
+      "title": "Активации",
+      "link": "game",
+      "icon": "fas fa-gamepad"
+    }
+  ]
+}

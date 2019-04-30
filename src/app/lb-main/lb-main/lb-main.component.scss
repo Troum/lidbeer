@@ -1,0 +1,151 @@
+.lb-main-first, .lb-main-make-sound, .lb-main-free-enter {
+  height: 100%;
+}
+
+.lb-main-free-enter .lb-main-free-enter-image-container {
+  z-index: 2;
+}
+
+.lb-main-make-sound-description, .lb-main-headliners {
+   top: calc(617px / 4);
+   width: 40%;
+   right: calc(100% / 12);
+ }
+
+.lb-main-key-visual {
+  top: calc(617px / 7);
+  width: 40%;
+  left: calc(100% / 12);
+}
+
+.lb-main-headliners {
+  top: calc(617px / 12);
+  width: 40%;
+  right: calc(100% / 12);
+}
+
+.lb-main-headliners-title-mobile, .lb-main-make-sound-description-mobile {
+  display: none;
+}
+
+.lb-main-free-enter-description {
+  top: calc(617px / 4);
+  width: 30%;
+  left: calc(100% / 14);
+}
+
+.lb-main-partners {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 30%;
+    height: 100%;
+    top: -45%;
+    left: -5%;
+    transform: rotate(-15deg);
+  };
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    bottom: -56%;
+    right: -12%;
+    transform: rotate(-5deg);
+  }
+
+}
+.lb-main-make-sound-bottom {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 80%;
+    height: 120%;
+    top: -45%;
+    left: -8%;
+    transform: rotate(9deg);
+  };
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    bottom: -23%;
+    right: -12%;
+    transform: rotate(8deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .lb-main-make-sound-bottom {
+    &:before {
+      width: 0;
+      height: 0;
+    }
+    &:after {
+      width: 0;
+      height: 0;
+    }
+  }
+  .lb-main-partners {
+    &:before {
+      width: 0;
+      height: 0;
+    }
+    &:after {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .lb-main-key-visual {
+    top: calc(617px / 2.7);
+    width: 87%;
+    left: calc(100% / 15);
+  }
+
+  .lb-main-headliners {
+    top: calc(617px / 20);
+    width: 40%;
+    left: calc(100% / 13);
+  }
+
+  .lb-main-headliners > div {
+    display: none;
+  }
+
+  .lb-main-headliners-title-mobile {
+    position: absolute;
+    display: block;
+    top: 4%;
+    left: 63%;
+  }
+
+  .lb-main-make-sound-description {
+    display: none;
+  }
+
+  .lb-white-bg-mobile {
+    background-color: #ffffff;
+  }
+
+  .lb-main-make-sound-description-mobile {
+    position: relative;
+    background-color: #ffffff;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+
+}

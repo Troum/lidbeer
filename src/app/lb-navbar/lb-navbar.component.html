@@ -1,0 +1,28 @@
+<div class="container">
+  <nav class="navbar navbar-expand-xl w-100 lb-navbar">
+    <a class="navbar-brand" routerLink="">
+      <img [src]="logo" alt="" class="">
+    </a>
+
+    <button  class="navbar-toggler hamburger hamburger--collapse" [ngClass]="{'is-active' : menu.collapse}" type="button" (click)="collapse()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" [ngClass]="{'show' : menu.collapse}">
+      <ul class="navbar-nav d-flex justify-content-between ml-xl-auto w-50">
+        <li *ngFor="let item of menu.menu.slice(2)" class="nav-item">
+          <a class="nav-link" [routerLink]="item.link" routerLinkActive="active-route" (click)="collapse()">{{ item.title }}</a>
+        </li>
+        <li class="nav-item">
+          <app-lb-ticket-button [text]="'набыць квiткi'" onclick="show_popup_frame('2', '0');" (click)="collapse()"></app-lb-ticket-button>
+        </li>
+        <li *ngFor="let icon of menu.social" class="nav-item">
+          <a [href]="icon.link" class="nav-link lb-social">
+            <i [ngClass]="icon.icon"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

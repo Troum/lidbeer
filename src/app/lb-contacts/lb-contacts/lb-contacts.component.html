@@ -1,0 +1,24 @@
+<div class="row m-0 p-0 d-flex lb-component">
+    <div class="col-11 col-xl-8 mx-auto">
+        <div class="row m-0 p-0">
+            <div class="col-11 col-xl-10 mx-auto my-5">
+                <h1 class="text-uppercase font-weight-bold text-center">{{ info.title }}</h1>
+                <h2 class="h6 text-center">{{ info.subtitle }}</h2>
+            </div>
+            <div class="col-11 col-xl-8 mx-auto my-3">
+                <div class="dropdown text-center">
+                    <button class="btn bg-white w-75 w-xl-50 dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ info.dropdown.button }}
+                    </button>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuButton">
+                        <a *ngFor="let item of info.dropdown.feedback" class="dropdown-item" (click)="chooseLink(item.link, item.title)">{{ item.title }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 col-xl-8 mx-auto my-3 text-center">
+                <app-lb-ticket-button [text]="'выбраць'" [routerLink]="info.router"></app-lb-ticket-button>
+            </div>
+        </div>
+        <app-lb-phone></app-lb-phone>
+    </div>
+</div>

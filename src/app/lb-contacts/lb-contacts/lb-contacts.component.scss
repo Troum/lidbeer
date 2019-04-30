@@ -1,0 +1,23 @@
+.dropdown-menu {
+  width: 50%;
+}
+
+.dropdown-item {
+  transition: all .3s;
+}
+
+.dropdown-item:hover {
+  background-color: #FCBB29;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .dropdown-menu {
+    width: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .w-xl-50 {
+    width: 50%!important;
+  }
+}

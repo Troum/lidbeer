@@ -1,0 +1,124 @@
+<div class="row m-0 p-0 d-flex lb-component">
+    <div class="col-12 p-0 mx-auto">
+        <div class="row m-0 p-0 lb-main-first">
+            <div class="col-12 m-0 p-0">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <img [src]="info.imageBG" alt="" class="img-fluid">
+                        <div class="position-absolute text-center lb-main-key-visual">
+                            <img src="../../../assets/img/key-visual.png" alt="" class="img-fluid mb-1 mb-xl-5">
+                            <app-lb-ticket-button [text]="'набыць квiткi'" onclick="show_popup_frame('2', '0');"></app-lb-ticket-button>
+                        </div>
+                        <div class="position-absolute text-center lb-main-headliners">
+                            <img src="../../../assets/img/cup.png" alt="" class="img-fluid mb-3">
+                            <div [innerHTML]="info.headliners"></div>
+                        </div>
+                        <div class="lb-main-headliners-title-mobile" [innerHTML]="info.headliners"></div>
+                    </div>
+                    <div class="col-12 p-0 lb-main-partners">
+                        <div class="row m-0 p-0">
+                            <div class="col-10 offset-1 col-xl-6 offset-xl-1">
+                                <div class="row m-0 p-0">
+                                    <div class="col-12 col-xl-7 p-0 mx-auto">
+                                        <div class="row my-auto p-4">
+                                            <div class="col-4 text-center" *ngFor="let item of partners.partners">
+                                                <img [src]="item.image" [alt]="item.title" class="img-fluid">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 p-0 mx-auto">
+        <div class="row m-0 p-0 lb-main-make-sound">
+            <div class="col-12 m-0 p-0">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0 lb-white-bg-mobile">
+                        <div class="lb-main-make-sound-description-mobile">
+                            <h1 class="d-block text-uppercase font-weight-bold text-center my-3" [innerHTML]="info.makesound.title"></h1>
+                            <p class="d-block text-justify">
+                                {{ info.makesound.description }}
+                            </p>
+                        </div>
+                        <img [src]="info.secondBG" alt="" class="img-fluid">
+                        <div class="position-absolute lb-main-make-sound-description">
+                            <h1 class="text-uppercase font-weight-bold text-center my-3" [innerHTML]="info.makesound.title"></h1>
+                            <p class="text-justify">
+                                {{ info.makesound.description }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 p-3 text-center" [innerHTML]="info.makesound.disclaimer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <div class="col-12 p-0 mx-auto">-->
+<!--        <div class="row m-0 p-0 lb-main-free-enter">-->
+<!--            <div class="col-12 m-0 p-0">-->
+<!--                <div class="row m-0 p-0">-->
+<!--                    <div class="col-12 m-0 p-0 lb-main-free-enter-image-container">-->
+<!--                        <img src="../../../assets/img/lb-third-bg-image.jpg" alt="" class="img-fluid">-->
+<!--                        <div class="position-absolute lb-main-free-enter-description">-->
+<!--                            <h1 class="text-uppercase font-weight-bold text-center my-3" [innerHTML]="info.freescene.title"></h1>-->
+<!--                            <p class="text-justify">-->
+<!--                                {{ info.freescene.description }}-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-12 p-5">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="col-12 mx-auto">-->
+<!--        <div class="row m-0">-->
+<!--            <div class="col-10 mx-auto">-->
+<!--                <h3 class="display-4 text-center text-uppercase">{{ info.organizators }}</h3>-->
+<!--            </div>-->
+<!--            <div class="col-6 mx-auto">-->
+<!--                <div class="row m-0 pt-5">-->
+<!--                    <div class="col-6 text-center">-->
+<!--                        <div class="row m-0 p-0">-->
+<!--                            <div class="col-12 m-0 p-0 text-center">-->
+<!--                                <img src="../../../assets/img/lid-logo.png" alt="" class="img-fluid">-->
+<!--                            </div>-->
+<!--                            <div class="col-12 p-5 text-center">-->
+<!--                                <p>{{ info.titles.logo }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-6 text-center">-->
+<!--                        <div class="row m-0 p-0">-->
+<!--                            <div class="col-12 m-0 p-0 text-center">-->
+<!--                                <img src="../../../assets/img/lida-emblem.png" alt="" class="img-fluid">-->
+<!--                            </div>-->
+<!--                            <div class="col-12 p-5 text-center">-->
+<!--                                <p>{{ info.titles.emblem }}</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-10 mx-auto">-->
+<!--                <h4 class="display-4 text-center text-uppercase">{{ info.infopartners }}</h4>-->
+<!--            </div>-->
+<!--            <div class="col-8 mx-auto">-->
+<!--                <div class="row m-0 pt-5 pb-5">-->
+<!--                    <div *ngFor="let item of partners.partners" class="col-4 text-center">-->
+<!--                        <img [src]="item.image" alt="" class="img-fluid">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-8 mx-auto pt-5 pb-5 text-center">-->
+<!--                <img src="../../../assets/img/ticket-pro.jpg" alt="" class="img-fluid">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>

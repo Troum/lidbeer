@@ -1,0 +1,30 @@
+.lb-navbar {
+  background-color: #FCBB29;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000;
+}
+
+.nav-link.active-route {
+  font-weight: 500;
+}
+
+.nav-link.active-route::before {
+  content: '[ ';
+}
+.nav-link.active-route::after {
+  content: ' ]';
+}
+
+@media (max-width: 576px) {
+  .lb-social {
+    display: none;
+  }
+
+  .navbar-toggler-icon {
+
+  }
+}

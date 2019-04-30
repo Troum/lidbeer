@@ -1,0 +1,11 @@
+<div class="lb-admin-wrapper">
+  <nav [appCollapse]="collapsed" class="lb-admin-sidebar">
+    <nav class="nav flex-column position-fixed">
+      <a *ngFor="let item of sidebar.sidebar" class="nav-link" [routerLink]="item.link" [routerLinkActive]="'active-route'"><i [ngClass]="item.icon"></i><span class="d-inline-block">&nbsp;&nbsp;{{ item.title }}</span></a>
+      <a class="nav-link" (click)="collapse()"><i [ngClass]="chevron"></i></a>
+    </nav>
+  </nav>
+  <div class="lb-admin-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

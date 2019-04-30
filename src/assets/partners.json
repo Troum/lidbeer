@@ -1,0 +1,16 @@
+{
+  "partners": [
+    {
+      "link": "",
+      "image": "../../../assets/img/tut.png"
+    },
+    {
+      "link": "",
+      "image": "../../../assets/img/unistar.png"
+    },
+    {
+      "link": "",
+      "image": "../../../assets/img/komsomol.png"
+    }
+  ]
+}
