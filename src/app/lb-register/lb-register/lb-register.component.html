@@ -1,0 +1,46 @@
+<div class="row m-0 p-0 d-flex align-items-center lb-component">
+  <div class="col-10 col-xl-9 mx-auto">
+    <h1 class="font-weight-bold text-uppercase text-center">{{ info.title }}</h1>
+  </div>
+  <div class="col-12">
+    <div class="row m-0 p-0">
+      <div class="col-10 col-xl-4 mx-auto">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="form-group">
+            <label for="name">{{ info.labels.name }}</label>
+            <input id="name" type="text" class="form-control rounded-0" [ngClass]="{ 'is-invalid':info.submitted && register.name.errors }" formControlName="name" autocomplete="off" required>
+            <div *ngIf="info.submitted && register.name.errors" class="invalid-feedback">
+              <div>{{ info.errors.name }}</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">{{ info.labels.email }}</label>
+            <input id="email" type="email" class="form-control rounded-0" [ngClass]="{ 'is-invalid':info.submitted && register.email.errors }" formControlName="email" autocomplete="off" required>
+            <div *ngIf="info.submitted && register.email.errors" class="invalid-feedback">
+              <div *ngIf="register.email.errors.required">{{ info.errors.email.required }}</div>
+              <div *ngIf="register.email.errors.email">{{ info.errors.email.email }}</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">{{ info.labels.password }}</label>
+            <input id="password" type="password" class="form-control rounded-0" [ngClass]="{ 'is-invalid':info.submitted && register.password.errors }" formControlName="password" autocomplete="off" required>
+            <div *ngIf="info.submitted && register.password.errors" class="invalid-feedback">
+              <div *ngIf="register.password.errors.required">{{ info.errors.password }}</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password_confirmation">{{ info.labels.password_confirmation }}</label>
+            <input id="password_confirmation" type="password" class="form-control rounded-0" [ngClass]="{ 'is-invalid':info.submitted && register.password_confirmation.errors }" formControlName="password_confirmation" autocomplete="off" required>
+            <div *ngIf="info.submitted && register.password_confirmation.errors" class="invalid-feedback">
+              <div *ngIf="register.password_confirmation.errors.required">{{ info.errors.password_confirmation.required }}</div>
+              <div *ngIf="register.password_confirmation.errors.mustMatch">{{ info.errors.password_confirmation.mustMatch }}</div>
+            </div>
+          </div>
+          <div class="form-group mt-5 text-center">
+            <app-lb-ticket-button [type]="'submit'" [text]="'зарэгістравацца'"></app-lb-ticket-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,7 @@ export class LbFeedbackPartnerComponent implements OnInit {
       documents: 'Прэзентацыйныя матэрыялы абавязковы!',
       contacts: 'Кантактная інфармацыя абавязкова!'
     },
-    pluralize: null,
+    pluralize: '',
     submitted: false,
     success: false,
     error: false
@@ -43,9 +43,9 @@ export class LbFeedbackPartnerComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      name: [null, Validators.required],
-      documents: [null, Validators.required],
-      contacts: [null, Validators.required]
+      name: ['', Validators.required],
+      documents: ['', Validators.required],
+      contacts: ['', Validators.required]
     });
   }
 

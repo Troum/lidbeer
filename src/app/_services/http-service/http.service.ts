@@ -15,4 +15,8 @@ export class HttpService {
   feedbackPartner(data: any) {
     return this.http.post<Response>(`${this.base}/feedback/partners/send`, data);
   }
+
+  userRegister(data: any) {
+    return this.http.post<Response>(`${this.base}/auth/register`, data);
+  }
 }

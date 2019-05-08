@@ -19,10 +19,6 @@ const routes: Routes = [
     loadChildren: './lb-contacts/lb-contacts.module#LbContactsModule'
   },
   {
-    path: 'administrative',
-    loadChildren: './lb-admin/lb-admin.module#LbAdminModule'
-  },
-  {
     path: 'contacts/craft',
     loadChildren: './lb-contacts/lb-contacts-craft/lb-contacts-craft.module#LbContactsCraftModule'
   },
@@ -45,6 +41,22 @@ const routes: Routes = [
   {
     path: 'contacts/partner',
     loadChildren: './lb-contacts/lb-contacts-partner/lb-contacts-partner.module#LbContactsPartnerModule'
+  },
+  {
+    path: 'admin/panel',
+    loadChildren: './lb-admin/lb-admin.module#LbAdminModule'
+  },
+  {
+    path: 'login',
+    loadChildren: './lb-login/lb-login.module#LbLoginModule'
+  },
+  {
+    path: 'logout',
+    loadChildren: './lb-logout/lb-logout.module#LbLogoutModule'
+  },
+  {
+    path: 'register',
+    loadChildren: './lb-register/lb-register.module#LbRegisterModule'
   }
 ];
 

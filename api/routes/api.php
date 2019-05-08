@@ -23,3 +23,9 @@ Route::group([
     Route::post('feedback/message/send', 'FeedbackController@feedbackMessage');
     Route::post('feedback/partners/send', 'FeedbackController@feedbackPartner');
 });
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('register', 'AuthorizationController@register');
+});
